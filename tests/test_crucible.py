@@ -19,6 +19,9 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "skills" / "crucible"))
 import crucible  # noqa: E402
 
+# behave like a fresh machine (CI): Python writes bytecode caches unless told otherwise
+os.environ.pop("PYTHONDONTWRITEBYTECODE", None)
+
 
 def run(*argv):
     out, err = io.StringIO(), io.StringIO()

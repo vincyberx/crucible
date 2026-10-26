@@ -214,7 +214,7 @@ def add_worktree(st, cid, commit):
     git(["worktree", "add", "--detach", "-q", str(wt), commit], st["root"])
     if st.get("setup_cmd"):
         p = subprocess.run(st["setup_cmd"].replace("{root}", st["root"]), shell=True,
-                           cwd=wt, capture_output=True, text=True)
+                           cwd=wt, capture_output=True, text=True, env=no_bytecode_env())
         if p.returncode != 0:
             log(st, "setup-cmd failed in %s: %s" % (cid, (p.stderr or p.stdout)[-300:]))
     return str(wt)
@@ -232,6 +232,12 @@ def write_patch(st, wt, commit, dest):
     return git(["diff", "--stat", st["base"], commit], wt)
 
 
+def no_bytecode_env():
+    # Python's bytecode cache is keyed on mtime in whole seconds and size: a fix
+    # of the same length saved within a second of the last run would run stale code
+    return dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
+
+
 def run_tests(st, wt, dest):
     if not st.get("test_cmd"):
         return None
@@ -240,7 +246,7 @@ def run_tests(st, wt, dest):
     # Crucible (e.g. "npm test && npm run lint"), like a Makefile target
     try:
         p = subprocess.run(st["test_cmd"], shell=True, cwd=wt, capture_output=True,
-                           text=True, timeout=st["test_timeout"])
+                           text=True, timeout=st["test_timeout"], env=no_bytecode_env())
         code, out = p.returncode, (p.stdout or "") + (p.stderr or "")
     except subprocess.TimeoutExpired as e:
         code, out = 124, "TIMEOUT after %ss\n%s" % (st["test_timeout"], e.stdout or "")
@@ -259,7 +265,8 @@ def run_checks(st, c, dest, answer=None):
         return None
     answer = Path(answer or Path(c["dir"]) / "solution.md")
     try:
-        p = subprocess.run([sys.executable, "-I", st["check_script"], str(answer)],
+        # -I ignores PYTHON* variables, so -B keeps the bytecode cache off here
+        p = subprocess.run([sys.executable, "-I", "-B", st["check_script"], str(answer)],
                            cwd=c["wt"] or st["dir"], capture_output=True, text=True, timeout=300)
         out, err = p.stdout or "", p.stderr or ""
     except subprocess.TimeoutExpired:

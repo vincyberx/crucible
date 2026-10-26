@@ -1,0 +1,6 @@
+{
+  "id": "write-03",
+  "kind": "write",
+  "title": "Dated zero-downtime migration plan",
+  "why_hard": "The one-deploy-per-day limit, the S5-before-S6 dependency, Tuesday-only lock windows and the 7-day gap after S6 push completion to 2026-11-24; scheduling the drop on 2026-11-17 (6 days after S6) is the tempting mistake."
+}

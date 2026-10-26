@@ -1,0 +1,8 @@
+{
+  "id": "reason-07",
+  "kind": "reason",
+  "title": "Two-week payroll with daily, weekly, seventh-day and holiday overtime",
+  "why_hard": "Every rule interacts with another. Shifts 4 and 10 must be split at midnight (the first 7 hours of the holiday come from shift 10). Holiday hours that are daily-regular still count toward the weekly 40, so week 2 passes 40 on Saturday 14. Monday 9 is the 7th consecutive working day but R5 applies only to Sunday 15, the one week with all seven days worked. Sunday 15's hours past 40 are already 1.5x, so a weekly premium added on top pays them twice. The holiday's hours past the 12th go to 2x, never stacked. Tempting misreadings: no midnight split 369920; seventh-day premium from Monday 9 onward 430080 (Monday 9 only: 390400); holiday hours left out of the 40: 377600; weekly premium computed as (regular hours - 40) and added on top: 390400; every hour counting toward the 40: 398080; holiday 1.75x beating the 2x hour: 379520; multipliers multiplied together: 395520.",
+  "answer": "380160",
+  "answer_type": "integer"
+}

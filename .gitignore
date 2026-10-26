@@ -1,0 +1,8 @@
+.crucible/
+__pycache__/
+*.pyc
+bench/results/
+.DS_Store
+bench/vendor/
+bench/private-tasks/
+bench/private-tasks-vague/

@@ -1,0 +1,8 @@
+{
+  "id": "reason-01",
+  "kind": "reason",
+  "title": "Rail pass expiry with travel days and a validity cap",
+  "why_hard": "Off-by-one traps stack up: the activation date is a Sunday and does not count, 2028 is a leap year (29 Feb consumes a day), a holiday that falls on a Sunday must not be subtracted twice, and the 50-day cap must be checked against the 40th travel day.",
+  "answer": "2028-04-15",
+  "answer_type": "string"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "reason-02",
+  "kind": "reason",
+  "title": "Order total with promotion, per-line VAT and half-up rounding",
+  "why_hard": "Several half-cent cases make banker's rounding (Python round) or float arithmetic drift by a cent, and the free-shipping threshold is easy to evaluate on the pre-discount or gift-card-inclusive subtotal, which wrongly makes shipping free.",
+  "answer": "13740",
+  "answer_type": "integer"
+}

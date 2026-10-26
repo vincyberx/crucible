@@ -1,0 +1,8 @@
+{
+  "id": "reason-05",
+  "kind": "reason",
+  "title": "PIN blocklist with overlapping rules",
+  "why_hard": "Six overlapping rejection rules invite double counting in inclusion-exclusion, and it is easy to forget 0229/2902 (leap year) or the exact inclusive year range.",
+  "answer": "9234",
+  "answer_type": "integer"
+}

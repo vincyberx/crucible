@@ -1,0 +1,8 @@
+{
+  "id": "code-09",
+  "kind": "code",
+  "title": "Cron next fire time with the day-of-month / day-of-week OR rule",
+  "why_hard": "Most of the spec matches common cron knowledge, but the day rule turns on whether a field's text starts with '*', not on whether it equals '*' or matches every day: '*/2' or '*/7' keep the AND rule. On top: weekday numbering (Sunday 0 and 7, while datetime.weekday() has Monday 0), '*/S' starting at the field minimum (day 1, month 1), strictly-later with seconds dropped, leap days including 2100, and a None answer that a minute-by-minute scan cannot reach quickly.",
+  "test_cmd": "python3 -m unittest discover -s tests -q",
+  "hidden_cmd": "python3 -m unittest discover -s tests_hidden -q"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "reason-09",
+  "kind": "reason",
+  "title": "Transit fares with transfers, service-day caps and end-of-day refunds",
+  "why_hard": "Order of application decides the total. The refund of ride 27 comes only after its service day, which includes ride 29 at 03:20 on Thursday, so ride 28 stays capped at 0. In week 1 the refunded 320 stops counting toward the weekly cap, so later rides fill the cap again. Rides 14 and 29 are charged 0 by caps but still start journeys, so rides 15 and 30 are transfers across a service-day or service-week boundary. The 90-minute window runs from the journey's first ride and is inclusive (ride 17), with at most 2 transfers (ride 24). Upgrades are priced with the first ride's peak status (ride 17). The cheaper-of-two discount gives 210 rather than 220 for off-peak 2-zone rides. Tempting misreadings: window measured from the previous ride 4180; strict < 90 4380; no transfer limit 4090; upgrade at the transfer's own peak status 4260; discounts combined 4080; calendar days/weeks for caps 4700; capped rides not starting journeys (or journeys cut at 04:00) 4630; refund applied immediately 4460; refunded amount still counting toward the weekly cap 3980; refunding the full fare 4060.",
+  "answer": "4300",
+  "answer_type": "integer"
+}

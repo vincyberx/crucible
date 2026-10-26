@@ -1,0 +1,10 @@
+{
+  "name": "crucible",
+  "version": "0.2.0",
+  "description": "Verify first, tournament only if verification fails: explicit acceptance checks measured by a script, fixed until they pass; a small tournament of hypotheses when they do not.",
+  "author": {
+    "name": "VinCyber"
+  },
+  "license": "MIT",
+  "keywords": ["verification", "acceptance-checks", "subagents", "tournament", "red-team"]
+}

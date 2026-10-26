@@ -1,0 +1,8 @@
+{
+  "id": "reason-08",
+  "kind": "reason",
+  "title": "Round-robin scheduler with I/O queue, context switches and simultaneous events",
+  "why_hard": "Four instants have simultaneous events that rule 7 orders: at t=6 A's I/O return queues ahead of B's arrival; at t=13 D's arrival goes ahead of the preempted B; at t=40 and t=56 an I/O return goes ahead of the preempted process. A's first burst ends exactly at quantum expiry, so it goes to I/O, not to the ready queue. At t=6 A is dispatched without a context switch even though the CPU was idle, because A was the last process to run. At t=36 C must wait for the single I/O device. Each tempting misreading changes the times: preempted process queued ahead of newcomers gives A=17,B=38,C=52,D=60,E=57; arrivals queued before I/O returns gives A=34,B=36,C=50,D=63,E=58; a switch on every dispatch gives A=18,B=43,C=50,D=63,E=59; a switch after an idle gap gives A=18,B=43,C=50,D=63,E=58; parallel I/O gives A=17,B=42,C=45,D=62,E=57; a free first dispatch gives A=16,B=37,C=51,D=58,E=60.",
+  "answer": "A=17,B=42,C=52,D=59,E=61",
+  "answer_type": "string"
+}

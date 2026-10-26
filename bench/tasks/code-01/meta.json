@@ -1,0 +1,8 @@
+{
+  "id": "code-01",
+  "kind": "code",
+  "title": "Union of intervals with open/closed bounds",
+  "why_hard": "Merging whenever next.start <= current.end ignores bracket types: open-open touching intervals get glued, empty degenerate intervals are kept, and closed-wins rules at shared endpoints are lost.",
+  "test_cmd": "python3 -m unittest discover -s tests -q",
+  "hidden_cmd": "python3 -m unittest discover -s tests_hidden -q"
+}

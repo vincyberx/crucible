@@ -1,0 +1,8 @@
+{
+  "id": "reason-04",
+  "kind": "reason",
+  "title": "Take-away game with two losing conditions",
+  "why_hard": "Solvers default to normal play (taking the last stone wins) or forget that being stuck with one stone also loses; each variant yields a plausible but different sum.",
+  "answer": "7437",
+  "answer_type": "integer"
+}

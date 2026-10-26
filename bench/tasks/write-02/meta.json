@@ -1,0 +1,6 @@
+{
+  "id": "write-02",
+  "kind": "write",
+  "title": "Incident summary from raw channel notes",
+  "why_hard": "The timeline mixes CEST and UTC, so the impact window (07:55-08:44 UTC, 49 minutes) is easy to miscompute; the early ~3,000 estimate competes with the final 2,371; names leak into a blameless summary; P2 items slip into the action list."
+}

@@ -1,0 +1,17 @@
+{
+  "name": "crucible",
+  "owner": {
+    "name": "VinCyber"
+  },
+  "metadata": {
+    "description": "Crucible: verify first, tournament only if verification fails",
+    "version": "0.2.0"
+  },
+  "plugins": [
+    {
+      "name": "crucible",
+      "description": "Verify first, tournament only if verification fails.",
+      "source": "./"
+    }
+  ]
+}

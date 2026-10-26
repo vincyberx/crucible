@@ -1,0 +1,8 @@
+{
+  "id": "code-07",
+  "kind": "code",
+  "title": "League table with re-applied head-to-head tie-breaks",
+  "why_hard": "Sorting by one key tuple (points, head-to-head over the whole points-level group, overall goal difference, name) passes every two-team tie but is wrong once three or more teams are level: the mini-table must be rebuilt for each still-level subset, possibly over several rounds, while a split on overall goal difference or goals scored must never restart the head-to-head step.",
+  "test_cmd": "python3 -m unittest discover -s tests -q",
+  "hidden_cmd": "python3 -m unittest discover -s tests_hidden -q"
+}

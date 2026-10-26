@@ -1,0 +1,8 @@
+{
+  "id": "code-03",
+  "kind": "code",
+  "title": "LRU cache with time-to-live, exact eviction semantics",
+  "why_hard": "A typical OrderedDict cache evicts the raw least-recent slot even when that slot is live and an expired entry is still sitting in the dict, gets the expiry boundary off by one (<= vs <), lets reads extend lifetime, and lets `in` change recency.",
+  "test_cmd": "python3 -m unittest discover -s tests -q",
+  "hidden_cmd": "python3 -m unittest discover -s tests_hidden -q"
+}

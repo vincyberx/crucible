@@ -1,0 +1,8 @@
+{
+  "id": "code-05",
+  "kind": "code",
+  "title": "Version precedence with pre-releases and build metadata",
+  "why_hard": "Easy to get the common cases right while missing the details the spec spells out: numeric vs alphanumeric identifier ordering, the shorter-prerelease rule, case-sensitive ASCII order, hyphens inside identifiers, ignoring build metadata, stable sort, and leading-zero / empty-identifier validation.",
+  "test_cmd": "python3 -m unittest discover -s tests -q",
+  "hidden_cmd": "python3 -m unittest discover -s tests_hidden -q"
+}

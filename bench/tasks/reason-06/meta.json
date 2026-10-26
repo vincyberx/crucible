@@ -1,0 +1,8 @@
+{
+  "id": "reason-06",
+  "kind": "reason",
+  "title": "League table with recursive head-to-head re-application",
+  "why_hard": "The awarded 0-3 and Bramley's deduction create a four-way tie on 9 points that needs two nested re-applications (4 clubs -> 3 -> 2, the last pair decided by its direct match) and a three-way tie on 7 that criterion (b) settles across all three clubs. Each tempting shortcut gives a different table: no re-application (straight to overall goal difference) puts Bramley 2nd; only one re-application swaps Oakham and Ironbridge; re-applying as soon as (a) splits a set (instead of after (a)-(c) on the whole set) swaps Lowfield and Pinecrest; goal difference before head-to-head, the on-pitch 1-1 or ignoring the deduction each give yet another order.",
+  "answer": "Ravenmoor,Oakham,Ironbridge,Bramley,Westbury,Lowfield,Pinecrest,Kestrel",
+  "answer_type": "string"
+}

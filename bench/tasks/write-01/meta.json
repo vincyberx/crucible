@@ -1,0 +1,6 @@
+{
+  "id": "write-01",
+  "kind": "write",
+  "title": "Release notes from a messy commit log",
+  "why_hard": "Single passes list the reverted Parquet export or its follow-up fix, list the fix to the --dry-run flag that is itself new in this release, leak the 'Falcon' codename from an otherwise valid fix, or blow the 140-word cap."
+}

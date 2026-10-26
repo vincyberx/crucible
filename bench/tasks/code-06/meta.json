@@ -1,0 +1,8 @@
+{
+  "id": "code-06",
+  "kind": "code",
+  "title": "Minimum-raggedness paragraph wrapping with an exact tie rule",
+  "why_hard": "Greedy filling is not optimal and charging the last line changes the answer; the usual forward DP (best cost for each prefix, first candidate kept on ties) returns a minimum-cost layout but not the one the tie rule asks for, because breaking ties locally on the last break orders layouts from the end, not from the first line.",
+  "test_cmd": "python3 -m unittest discover -s tests -q",
+  "hidden_cmd": "python3 -m unittest discover -s tests_hidden -q"
+}

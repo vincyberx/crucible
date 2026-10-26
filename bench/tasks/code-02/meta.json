@@ -1,0 +1,8 @@
+{
+  "id": "code-02",
+  "kind": "code",
+  "title": "Largest-remainder money allocation, exact and deterministic",
+  "why_hard": "Float arithmetic and round() look fine on small amounts, but break exactness on huge totals, and Python's floor on negative totals hands the extra cents to the wrong recipients instead of mirroring the positive split.",
+  "test_cmd": "python3 -m unittest discover -s tests -q",
+  "hidden_cmd": "python3 -m unittest discover -s tests_hidden -q"
+}

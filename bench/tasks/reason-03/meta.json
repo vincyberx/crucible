@@ -1,0 +1,8 @@
+{
+  "id": "reason-03",
+  "kind": "reason",
+  "title": "Knights and knaves with counts and a conditional",
+  "why_hard": "Each common slip leads to a different but self-consistent answer: treating 'or' as exclusive, excluding the speaker from 'the six of us', or reading 'if C then D' as 'C iff D' (missing that it is vacuously true when C is a knave).",
+  "answer": "A,B,D,E",
+  "answer_type": "set"
+}

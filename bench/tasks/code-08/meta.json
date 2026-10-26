@@ -1,0 +1,8 @@
+{
+  "id": "code-08",
+  "kind": "code",
+  "title": "Exact integer expression evaluator with power, unary minus and truncating division",
+  "why_hard": "Small positive cases pass with almost any parser, but the spec fixes semantics that differ from habit: right-associative ^, unary minus looser than ^ yet allowed right after ^, no unary plus, and C-style truncating / and % on arbitrary-size integers, where the usual int(a / b) goes through a float and is wrong (or overflows) on big numbers while Python's // and % floor instead of truncating.",
+  "test_cmd": "python3 -m unittest discover -s tests -q",
+  "hidden_cmd": "python3 -m unittest discover -s tests_hidden -q"
+}

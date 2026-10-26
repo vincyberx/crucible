@@ -1,0 +1,8 @@
+{
+  "id": "code-04",
+  "kind": "code",
+  "title": "Template renderer with escapes, nested paths and defaults",
+  "why_hard": "Quick implementations use `value or default` (so 0/''/None/False fall back to the default), split the default on every `|`, pre-replace `{{`/`}}` globally (breaking `{{{a}}}`), and skip path validation and stray-brace errors.",
+  "test_cmd": "python3 -m unittest discover -s tests -q",
+  "hidden_cmd": "python3 -m unittest discover -s tests_hidden -q"
+}
